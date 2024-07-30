@@ -1,10 +1,12 @@
 package B1;
 
-public class Student {
+public abstract class Student {
     protected int id;
     protected String name;
     protected int price;
     protected double tax;
+
+    abstract void tinhDiem();
 
     @Override
     public String toString() {
@@ -16,8 +18,11 @@ public class Student {
                 '}';
     }
 
-    public Student() {
-
+    public Student(int id, String name, int price, double tax) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.tax = tax;
     }
 
     public int getId() {
